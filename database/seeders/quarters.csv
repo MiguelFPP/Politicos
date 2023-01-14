@@ -1,0 +1,441 @@
+﻿id,name,commune_id
+,Augusto e Medina,1
+,Baltazar,1
+,Centro,1
+,Combeima,1
+,Estacion,1
+,Interlaken,1
+,La Pola,1
+,Libertador,1
+,Pola Parte Alta,1
+,Pueblo Nuevo,1
+,San Pedro Alejandrino,1
+,20 De Julio,2
+,7 De Agosto,2
+,Alaska,2
+,Ancon,2
+,Belen,2
+,Belencito,2
+,Centenario,2
+,Cerro Pan de Azucar,2
+,Clarita Botero,2
+,La Aurora,2
+,La Paz,2
+,La Sofia,2
+,La Trinidad,2
+,Malavar,2
+,Paraiso,2
+,San Diego,2
+,Santa Barbara,2
+,Santa Cruz,2
+,VI Brigada,2
+,Vida De Calambeo,2
+,Villa Adriana,2
+,Antonio Nariño,3
+,Belalcazar,3
+,Calambeo,3
+,Carmenza Rocha,3
+,El Carmen,3
+,Fenalco,3
+,Gaitan Parte Alta,3
+,Inem,3
+,La Esperanza,3
+,La Granja,3
+,Las Acacias,3
+,San Simon Parte Alta,3
+,San Simon Parte Baja,3
+,Villa Ilusion,3
+,Villa Pinzon,3
+,Villa Valentina,3
+,Viveros,3
+,Alfonzo Lopez,4
+,Calarca,4
+,Cambulos,4
+,Caracoli,4
+,Castilla,4
+,Gaitan,4
+,Jakaranda,4
+,Jesus Maria Cordoba,4
+,Jose Maria Cordoba Parte Baja,4
+,Limonar,4
+,Limonar V Sector,4
+,Onzaga,4
+,Piedra Pintada,4
+,Pijao,4
+,Restrepo,4
+,Rincon Piedra Pintada,4
+,San Carlos,4
+,San Luis,4
+,Sorrento,4
+,Toscana,4
+,Triunfo,4
+,Villa Marle II,4
+,Villa Marlen I,4
+,Villa Tereza,4
+,4 Etapa Del Jordan,5
+,6 Etapa Del Jordan,5
+,7 Etapa Del Jordan,5
+,8 Etapa Del Jordan,5
+,9 Etapa Del Jordan,5
+,Andalucia,5
+,Arboleda Margaritas,5
+,Arkacentro,5
+,Arkamonica,5
+,Arrayanes,5
+,Calatayud,5
+,Conjunto Residencial La Alameda,5
+,Cordobita,5
+,El Eden,5
+,La Campiña,5
+,La Ladera,5
+,Las Margaritas,5
+,Las Orquideas,5
+,Macadamia,5
+,Multifamiliares El Jordan,5
+,Multifamiliares Las Margaritas,5
+,Prados Del Norte,5
+,Rincon De La Campiña,5
+,San Jacinto,5
+,Torre Ladera,5
+,Urb. Aimara I,5
+,Urb. Aimara II,5
+,Urb. Rincon de las Margaritas,5
+,Urb. Los Ocobos,5
+,Urb. Milenium I y II,5
+,Urb. Yacaira,5
+,Urb. Los Parrales,5
+,Agua Viva,6
+,Altos de San Francisco,6
+,Balcones Del Vergel,6
+,Bosques Del Vergel,6
+,Brisas Del Pedregal,6
+,Cadaveral I,6
+,Cadaveral II,6
+,Caminos De Juan Pablo II,6
+,Caminos De San Francisco,6
+,Caminos Del Vergel,6
+,Condominio Ronda Del Vergel,6
+,Condominio Tierra Alta,6
+,Conjunto Cerrado Ambala,6
+,Conjunto Cerrado Los Balsos,6
+,El Mirador,6
+,El Triunfo,6
+,Estancia Del Vergel,6
+,Fuente De Los Rosales,6
+,Fuente De Los Rosales II,6
+,La Balsa,6
+,La Esperanza,6
+,La Gaviota,6
+,Las Delicias,6
+,Los Alpes,6
+,Los Angeles,6
+,Los Ciruelos,6
+,Los Mandarinos,6
+,Montemadero,6
+,Monteverde del Vergel,6
+,Palma Del Vergel,6
+,Paseo De San Francisco,6
+,Palzas Del Bosque,6
+,Portal Del Vergel,6
+,Primavera De Entre Rios,6
+,Reservas Del Pedregal,6
+,Rincon De San Francisco,6
+,Rincon Del Pedregal I,6
+,Rincon del Pedregal II,6
+,Rincon Del Vergel,6
+,San Antonio,6
+,Tierra Linda Del Vergel,6
+,Torre Fuente De Los Rosales,6
+,Torres De La Calleja,6
+,Urb. Arkala I,6
+,Urb. Arkambuco I,6
+,Urb. Colinas Del Norte,6
+,Urb. Pedregal,6
+,Urb. Villa Patricia,6
+,Urb. Altos De Ambala,6
+,Urb. Altos De Pedregal,6
+,Urb. Ambala,6
+,Urb. Antares I,6
+,Urb. Antares II,6
+,Urb. Arkala II,6
+,Urb. Chicala,6
+,Urb. Entre Rios,6
+,Urb. Entre Rios II,6
+,Urb. Fuente De Los Rosale I,6
+,Urb. Girasol,6
+,Urb. Ibague 2000,6
+,Urb. Los Cambulos,6
+,Urb. Los Gualandayes,6
+,Urb. Villa Vanesa,6
+,Villa Gloria,6
+,Alamos,7
+,Chico,7
+,El Salado,7
+,Hacienda El Recreo,7
+,Los Musicos,7
+,Mirador De Cantabria,7
+,Modelia I,7
+,Modelia II,7
+,Nueva Bilbao,7
+,Pedro Ignacio Villamarin,7
+,Rosales De Tahilandia,7
+,Santa Ana,7
+,Sector los Alpes,7
+,Timaka,7
+,Urb. Santa Coloma,7
+,Urb. Alameda,7
+,Urb. Alberto Lleras C.,7
+,Urb. Ambikaima,7
+,Urb. Cantabria,7
+,Urb. Comfatolima,7
+,Urb. Diana Milaidy,7
+,Urb. El Dorado,7
+,Urb. El Limon,7
+,Urb. EL Palmar,7
+,Urb. Fuente Del Salado,7
+,Urb. Fuente Santa,7
+,Urb. La cabaña,7
+,Urb. La Candelaria,7
+,Urb. La Floresta,7
+,Urb. La Victoria,7
+,Lady Di,7
+,Urb. Los Lagos,7
+,Urb. Monte Carlos II,7
+,Urb. Oviedo,7
+,Urb. Pacande,7
+,Urb. Palma Del Rio,7
+,Urb. Palo Grande,7
+,Urb. Portales Del Norte,7
+,Urb. Praderas Del Norte,7
+,Urb. Reservas De Cantabria,7
+,Urb. San Luis,7
+,Urb. San Luis Gonzaga,7
+,Urb. San Luisu,7
+,Urb. San Pablo,7
+,Urb. San Sebastian,7
+,Urb. Santa Catalina I,7
+,Urb. Santa Monica,7
+,Urb. Shaddi,7
+,Urb. Territorio De Paz,7
+,Urb. Tierra Firme,7
+,Urb. Villa Brasilia,7
+,Urb. Villa Camila,7
+,Urb. Villa Cindy,7
+,Urb. Villa Clara I,7
+,Urb. Villa Clara II,7
+,Urb. Villa Julieta,7
+,Urb. Villa Rocio,7
+,Urb. Villa Sulay,7
+,Urb. La Ceiba Norte,7
+,Villa Martha,7
+,Villa Salome,7
+,Villa suiza,7
+,Atolsure,8
+,Caminos Del Bosque,8
+,Ciudadela Simon Bolivar I,8
+,Ciudadela Simon Boliva II,8
+,Ciudadela Simon Boliva III,8
+,Conj. Residencial San Joaquin,8
+," El Bunde I, II y III",8
+,German Hurtas,8
+,Jardin I,8
+,Jardin III,8
+,Jardin Parte Baja,8
+," Jardin Santander I, II y III",8
+,Jardin Valparaiso,8
+,La Cima I,8
+,La Cima II,8
+,Musicalia,8
+,Palermo,8
+,Portal Del Jardin,8
+,Reservas Del Jardin,8
+,Roberto Augusto Calderon,8
+,San Gelato,8
+,Topacio,8
+,Tulio Varon,8
+,Unidad Residencial Carabineros,8
+,Urb. 2 de Junio,8
+,Urb. Agua Marina,8
+,Urb. Altos de Vasconia,8
+,Urb. Antonio Maria.,8
+,Urb. Brisas de Vasconia,8
+,Urb. Buenaventura Garcia,8
+,Urb. Ciudad Blanca,8
+,Urb. El Palmar I,8
+,Urb. El Palmar II,8
+,Urb. El Prado I,8
+,Urb. El Prado II,8
+,Urb. Jardin Atolsure,8
+,Urb. Jardin Av,8
+,Urb. Jardin Chipalo,8
+,Urb. Jardin Chipalo II,8
+,Urb. Jardin II,8
+,Urb. Jardin Porvenir,8
+,Urb. Jardin VI,8
+,Urb. Jardines Del Campo,8
+,Urb. La Esmeralda,8
+,Urb. Las Acacias,8
+,Urb. Los Comuneros,8
+,Urb. Los Laureles,8
+,Urb. Pinos,8
+,Urb. Nueva Castilla,8
+,Urb. Nueva Colombia,8
+,Urb. Nuevo Armero,8
+,Urb. Nuevo Combeima,8
+,Urb. Portal de Arkala,8
+,Urb. Protecho,8
+,Urb. Quinta Av,8
+,Urb. Tolima Grande,8
+,Urb. Vasconia,8
+,Urb. Vasconia Reservado,8
+,Urb. Villa Del Norte,8
+,Urb. Villa Del Palmar,8
+,Urb. Villa Del Sol,8
+,Urb. Villa Esperanza,8
+,Urb. Villa Jardin,8
+,Urb. Villa La Paz,8
+,Urb. Magdalena,8
+,Urb. Villa Marcela,8
+,Urb. Villa Vicentina,8
+,Villa Cristales,8
+,Yerbabuena,8
+,2 Etapa del Jordan,9
+,Alfonso Uribe Badillo,9
+,Altamira,9
+,Aparco,9
+,Arboleda,9
+,Arkaniza I,9
+,Arkaniza II,9
+,Arkaparaiso,9
+,Bello Horizonte,9
+,Bosque De La Alameda,9
+,Carrenales,9
+,Conj. Las Palmeras,9
+,Conj. Residencial Valparaiso,9
+,El Tunal,9
+,Hacienda Piedra Pintada,9
+,Jordan 3 Etapa,9
+,Jordan 1 Etapa,9
+,La Floresta,9
+,Los Tunjos,9
+,Picaleñita,9
+,Picaleña,9
+,Portal De Los Tunjos,9
+,Reservas Del Campestre,9
+,Rincon De Las Americas,9
+,Rincon Del Campestre,9
+,San Francisco,9
+,San Remo,9
+,Urb. Bosque De Varsovia,9
+,Urb. Chaquen,9
+,Urb. Ciudad Luz,9
+,Urb. Comfenalco,9
+,Urb. Coopdiasam,9
+,Urb. Cutucumay,9
+,Urb. El Poblado,9
+,Urb. Las Americas,9
+,Urb. Las Flores,9
+,Urb. Los Remansos,9
+,Urb. Miraflores,9
+,Urb. Nuevo Horizonte,9
+,Urb. Portal Campestre,9
+,Urb. Padreras De Santa Rita,9
+,Urb. Tahiti,9
+,Urb. Varsovia,9
+,Urb. Villa Arkadia,9
+,Urb. Villa Café,9
+,Urb. Villa De La Candelaria,9
+,Urb. Villa Luz,9
+,Urb. Villa Yuli,9
+,Valparaiso I,9
+,Valparaiso II,9
+,Valparaiso III,9
+,Valparaiso IV,9
+,Versalles,9
+,Villa Carvajalita,9
+,Villa Del Pilar,9
+,Villa Maria,9
+,Villa Natalia,9
+,29. rkalena,10
+,Bosques De Santa Helena,10
+,Boyaca,10
+,Cadiz,10
+,Casa Club,10
+,Castellana,10
+,Claret,10
+,Departamental,10
+,Federico Lleras,10
+,Hipodromo,10
+,La Francia,10
+,Las Palmas,10
+,Laureles,10
+,Macarena Parte Alta,10
+,Macarena Parte Baja,10
+,Magisterio,10
+,Metaima Alta,10
+,Metaima Parte Baja,10
+,Montealegre,10
+,Nacional,10
+,Naciones Unidas,10
+,San Cayetano,10
+,Santa Helena,10
+,Santander,10
+,12 De Octubre,11
+,Alto De La Cruz,11
+,America,11
+,Arado,11
+,Bosque Parte Alta,11
+,Bosque Parte Baja,11
+,El Refugio II,11
+,El Refugio II,11
+,Garzon,11
+,Independiente,11
+,La Isla,11
+,La Martinica,11
+,Las Brisas,11
+,Las Ferias,11
+,Libertad,11
+,Los Martires,11
+,Peñon,11
+,Popular,11
+,Rodriguez Andrade,11
+,San Vicente De Paul,11
+,Uribe Uribe,11
+,Villa Del Rio,11
+,Villa Maria,11
+,Andres Lopez De Galarza,12
+,Avenida,12
+,Colonias De Asprovi,12
+,Galan,12
+,Industrial,12
+,Keneddy,12
+,La Gaitana,12
+,La Padera,12
+,La Reforma,12
+,Las Vegas,12
+,Matallana,12
+,Murillo Toro,12
+,Ricaurte,12
+,Rosa Badillo,12
+,Santofimio,12
+,Urb. Arkaima,12
+,Urb. Divino Niño,12
+,Urb. Terrazas Del Tejar,12
+,Venecia,12
+,Villa Claudia,12
+,Villa Luces,12
+,Yuldaima,12
+,Albania,13
+,Boqueron,13
+,Cerro Granate,13
+,Colina 1,13
+,Colina 2,13
+,Dario Echandia,13
+,Granada,13
+,Isla,13
+,Jazmin,13
+,La Union,13
+,Miramar,13
+,San Isidro,13
+,Terrazas De Boqueron,13
+,Villa Mery,13
