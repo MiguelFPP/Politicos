@@ -49,4 +49,9 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/usuarios/{id}/actualizar', [UsuarioController::class, 'actualizar_guardar'])->name('usuarios.actualizar.guardar');
     Route::get('/usuarios/{id}/eliminar', [UsuarioController::class, 'eliminar'])->name('usuarios.eliminar');
     Route::get('/usuarios/{id}/eliminar/conf', [UsuarioController::class, 'eliminar_confirmar'])->name('usuarios.eliminar.confirmar');
+
+    Route::prefix('location')->group(function () {
+        Route::get('quarters/{commune_id}', [LocationController::class, 'getQuarters'])->name('location.quarters');
+        Route::get('sidewalks/{township_id}', [LocationController::class, 'getSidewalks'])->name('location.sidewalks');
+    });
 });

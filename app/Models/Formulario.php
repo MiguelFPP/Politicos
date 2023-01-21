@@ -18,7 +18,7 @@ class Formulario extends Model
         'genero',
         'direccion',
         'tipo_zona',
-        'zona',
+        'location',
         'puesto_votacion',
         'mensaje'
     ];

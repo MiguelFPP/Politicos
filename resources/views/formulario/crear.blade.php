@@ -116,14 +116,38 @@
                             </div>
                         </div>
 
-                        <div class="col-12">
+                        <div class="col-12" id="zona-container">
+                            <select name="commune_id" id="commune_id" style="display: none" class="form-control">
+                                <option value="0">Selecciona una comuna</option>
+                                @foreach ($communes as $commune)
+                                    <option value="{{ $commune->id }}">{{ $commune->name }}</option>
+                                @endforeach
+                            </select>
+
+                            <select name="township_id" id="township_id" style="display: none">
+                                <option value="0">Selecciona una vereda</option>
+                                @foreach ($townships as $township)
+                                    <option value="{{ $township->id }}">{{ $township->name }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+
+                        <div class="col-12" id="zona-container">
+                            <select name="quarter_id" id="quarter_id" style="display: none" class="form-control">
+                            </select>
+
+                            <select name="sidewalk_id" id="sidewalk_id" style="display: none">
+                            </select>
+                        </div>
+
+                        {{-- <div class="col-12">
                             <label for="zona" class="form-label">Comuna / Corregimiento</label>
                             <input type="text" class="form-control" id="zona" name="zona" placeholder="Comuna"
                                 required>
                             <div class="invalid-feedback">
                                 Por favor ingresa tu Comuna / Corregimiento.
                             </div>
-                        </div>
+                        </div> --}}
 
                         <div class="col-12">
                             <label for="zona" class="form-label">Puesto de votacion</label>
@@ -201,4 +225,86 @@
                 })()
             })
         </script>
-    @endsection
+
+        <script>
+            const selectTipoZona = document.getElementById('tipo_zona');
+            let commune=document.getElementById('commune_id');
+            let township=document.getElementById('township_id');
+            let quarter=document.getElementById('quarter_id');
+            let sidewalk=document.getElementById('sidewalk_id');
+            selectTipoZona.addEventListener('change', (e) => {
+                if (e.target.value == 'Comuna') {
+                    commune.style.display = 'block';
+                    commune.classList.add('form-control');
+                    /* set value towship to 0 */
+                    township.value = 0;
+                    township.style.display = 'none';
+                    township.classList.remove('form-control');
+                    /* set value sidewalk to 0 */
+                    sidewalk.value = 0;
+                    sidewalk.style.display = 'none';
+                    sidewalk.classList.remove('form-control');
+
+                    commune.addEventListener('change', (a)=>{
+                        let id = a.target.value
+
+                        let routeLocationQuarters = `{{ route('location.quarters', ':id') }}`;
+                        url = routeLocationQuarters.replace(':id', id);
+
+                        fetch(url)
+                        .then(res => res.json())
+                        .then(data => {
+                            let html = '';
+                            html += `<option value="0">Seleccione un barrio</option>`
+                            data.forEach(quarter => {
+                                html += `<option value="${quarter.id}">${quarter.name}</option>`
+                            });
+                            quarter.innerHTML = html;
+                            quarter.style.display = 'block';
+                            quarter.classList.add('form-control');
+                        })
+                    })
+
+                }else if(e.target.value == 'Vereda'){
+                    township.style.display = 'block';
+                    township.classList.add('form-control')
+                    commune.style.display = 'none';
+                    commune.classList.remove('form-control');
+                    quarter.style.display = 'none';
+                    quarter.classList.remove('form-control');
+
+                    township.addEventListener('change', (a)=>{
+                        let id = a.target.value
+
+                        let routeLocationSidewalks = `{{ route('location.sidewalks', ':id') }}`;
+                        url = routeLocationSidewalks.replace(':id', id);
+
+                        fetch(url)
+                        .then(res => res.json())
+                        .then(data => {
+                            let html = '';
+                            html += `<option value="0">Seleccione una vereda</option>`
+                            data.forEach(sidewalk => {
+                                html += `<option value="${sidewalk.id}">${sidewalk.name}</option>`
+                            });
+                            sidewalk.innerHTML = html;
+                            sidewalk.style.display = 'block';
+                            sidewalk.classList.add('form-control');
+                        })
+                    })
+                }else {
+                    commune.style.display = 'none';
+                    commune.classList.remove('form-control');
+                    township.style.display = 'none';
+                    township.classList.remove('form-control');
+                    quarter.style.display = 'none';
+                    quarter.classList.remove('form-control');
+                    sidewalk.style.display = 'none';
+                    sidewalk.classList.remove('form-control');
+                }
+            });
+        </script>
+        <script src="{{asset('js/quarters.js')}}"></script>
+        <script src="{{asset('js/sidewalks.js')}}"></script>
+
+@endsection

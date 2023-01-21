@@ -22,7 +22,8 @@ class TablaFormularios extends Migration
             $table->string('telefono');
             $table->string('genero');
             $table->string('direccion');
-            $table->string('zona');
+            $table->string('location');
+            /* $table->string('zona'); */
             $table->string('puesto_votacion');
             $table->text('mensaje')->nullable();
             $table->timestamps();
