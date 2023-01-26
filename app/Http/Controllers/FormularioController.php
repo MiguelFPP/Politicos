@@ -23,6 +23,39 @@ class FormularioController extends Controller
         return view('formulario.index');
     }
 
+    public function allForms()
+    {
+        $user = Auth::user();
+
+        if ($user->hasRole('administrador')) {
+            $forms = Formulario::all();
+        } else {
+            $forms = Formulario::where('propietario_id', $user->id)->get();
+        }
+        /* forms have forms->location is a json, Browse to get the names of the locations from the database and change the ids for the name obtained */
+        foreach ($forms as $form) {
+            $location = json_decode($form->location);
+            if ($form->tipo_zona == 'Comuna') {
+                $commune = Commune::find($location->commune_id);
+                $quarter = Quarter::find($location->quarter_id);
+                $form->location = $commune->name . ' - ' . $quarter->name;
+            } else {
+                $township = Township::find($location->township_id);
+                $sidewalk = Sidewalk::find($location->sidewalk_id);
+                $form->location = $township->name . ' - ' . $sidewalk->name;
+            }
+
+            /* and inser button with actions, update, delete */
+
+            $form->acciones = '<a href="' . route('formularios.actualizar', $form->id) . '" class="btn btn-outline-primary m-2" title="Editar formulario"><i class="fa fa-edit"></i></a>'
+                . '<a href="' . route('formularios.eliminar', $form->id) . '" class="btn btn-outline-danger" title="Eliminar formulario"><i class="fa fa-times"></i></a>';
+        }
+
+
+
+        return response()->json($forms);
+    }
+
     public function tabla()
     {
         return Datatables::of(Formulario::query())
