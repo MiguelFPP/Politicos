@@ -41,45 +41,45 @@
                                     <option value=""></option>
                                 @endif
                             </select>
-                            <div class="invalid-feedback">
-                                Este campo es requerido.
-                            </div>
+                            @error('creador')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
                         </div>
 
                         <div class="col-sm-6">
                             <label for="nombres" class="form-label">Nombre(s)</label>
                             <input type="text" class="form-control" id="nombres" name="nombres" placeholder=""
                                 value="" required>
-                            <div class="invalid-feedback">
-                                Este campo es requerido.
-                            </div>
+                            @error('nombres')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
                         </div>
 
                         <div class="col-sm-6">
                             <label for="apellidos" class="form-label">Apellido(s)</label>
                             <input type="text" class="form-control" id="apellidos" name="apellidos" placeholder=""
                                 value="" required>
-                            <div class="invalid-feedback">
-                                Este campo es requerido.
-                            </div>
+                            @error('apellidos')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
                         </div>
 
                         <div class="col-12">
                             <label for="email" class="form-label">Email</label>
                             <input type="email" class="form-control" id="email" name="email"
                                 placeholder="usuario@mail.com" required>
-                            <div class="invalid-feedback">
-                                Por favor ingresa un Email valido.
-                            </div>
+                            @error('email')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
                         </div>
 
                         <div class="col-12">
                             <label for="telefono" class="form-label">Telefono</label>
                             <input type="text" class="form-control" id="telefono" name="telefono"
                                 placeholder="+57 321-123-1122" required>
-                            <div class="invalid-feedback">
-                                Por favor ingresa tu numero telefonico.
-                            </div>
+                            @error('telefono')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
                         </div>
 
                         <div class="col-12">
@@ -90,54 +90,69 @@
                                     <option value="Mujer">Mujer</option>
                                     <option value="Otro">Otro</option>
                                 </select>
-                            <div class="invalid-feedback">
-                                Por favor ingresa tu sexo.
-                            </div>
+                            @error('genero')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
                         </div>
 
                         <div class="col-12">
                             <label for="direccion" class="form-label">Direccion</label>
                             <input type="text" class="form-control" id="direccion" name="direccion"
                                 placeholder="Direccion" required>
-                            <div class="invalid-feedback ">
-                                Por favor ingresa tu direccion.
-                            </div>
+                            @error('direccion')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
                         </div>
 
                         <div class="col-12">
                             <label for="tipo_zona" class="form-label">Tipo de ubicacion</label>
                             <select name="tipo_zona" id="tipo_zona" class="form-control" required>
-                                <option value="0">Seleccion el tipo de zona</option>
+                                <option value="">Seleccion el tipo de zona</option>
                                 <option value="Comuna">Comuna</option>
                                 <option value="Vereda">Vereda</option>
                             </select>
-                            <div class="invalid-feedback">
-                                Seleccion un tipo de zona valido
-                            </div>
+                            @error('tipo_zona')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
                         </div>
 
                         <div class="col-12" id="zona-container">
-                            <select name="commune_id" id="commune_id" style="display: none" class="form-control">
-                                <option value="0">Selecciona una comuna</option>
+                            <select name="commune_id" id="commune_id" style="display: none" class="form-control mb-2">
+                                <option value="">Selecciona una comuna</option>
                                 @foreach ($communes as $commune)
                                     <option value="{{ $commune->id }}">{{ $commune->name }}</option>
                                 @endforeach
                             </select>
 
-                            <select name="township_id" id="township_id" style="display: none">
-                                <option value="0">Selecciona una vereda</option>
+                            <select name="township_id" id="township_id" style="display: none" class="form-control mb-2">
+                                <option value="">Selecciona una vereda</option>
                                 @foreach ($townships as $township)
                                     <option value="{{ $township->id }}">{{ $township->name }}</option>
                                 @endforeach
                             </select>
+
+                            @error('commune_id')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
+                            @error('township_id')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
                         </div>
 
                         <div class="col-12" id="zona-container">
-                            <select name="quarter_id" id="quarter_id" style="display: none" class="form-control">
+                            <select name="quarter_id" id="quarter_id" style="display: none" class="form-control mb-2">
                             </select>
 
-                            <select name="sidewalk_id" id="sidewalk_id" style="display: none">
+                            <select name="sidewalk_id" id="sidewalk_id" style="display: none" class="form-control mb-2">
                             </select>
+
+                            @error('quarter_id')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
+                            @error('sidewalk_id')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
+
                         </div>
 
                         {{-- <div class="col-12">
@@ -156,6 +171,10 @@
                             <div class="invalid-feedback">
                                 Por favor ingresa tu puesto de votacion.
                             </div>
+
+                            @error('puesto_votacion')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
                         </div>
 
                         <div class="col-12">
@@ -235,15 +254,15 @@
             selectTipoZona.addEventListener('change', (e) => {
                 if (e.target.value == 'Comuna') {
                     commune.style.display = 'block';
-                    commune.classList.add('form-control');
+                    commune.required = true;
                     /* set value towship to 0 */
-                    township.value = 0;
+                    township.value = '';
                     township.style.display = 'none';
-                    township.classList.remove('form-control');
+                    township.required = false;
                     /* set value sidewalk to 0 */
-                    sidewalk.value = 0;
+                    sidewalk.value = '';
                     sidewalk.style.display = 'none';
-                    sidewalk.classList.remove('form-control');
+                    sidewalk.required = false;
 
                     commune.addEventListener('change', (a)=>{
                         let id = a.target.value
@@ -255,23 +274,22 @@
                         .then(res => res.json())
                         .then(data => {
                             let html = '';
-                            html += `<option value="0">Seleccione un barrio</option>`
+                            html += `<option value="">Seleccione un barrio</option>`
                             data.forEach(quarter => {
                                 html += `<option value="${quarter.id}">${quarter.name}</option>`
                             });
                             quarter.innerHTML = html;
                             quarter.style.display = 'block';
-                            quarter.classList.add('form-control');
+                            quarter.required = true;
                         })
                     })
 
                 }else if(e.target.value == 'Vereda'){
                     township.style.display = 'block';
-                    township.classList.add('form-control')
                     commune.style.display = 'none';
-                    commune.classList.remove('form-control');
+                    commune.required = false;
                     quarter.style.display = 'none';
-                    quarter.classList.remove('form-control');
+                    quarter.required = false;
 
                     township.addEventListener('change', (a)=>{
                         let id = a.target.value
@@ -283,24 +301,24 @@
                         .then(res => res.json())
                         .then(data => {
                             let html = '';
-                            html += `<option value="0">Seleccione una vereda</option>`
+                            html += `<option value="">Seleccione una vereda</option>`
                             data.forEach(sidewalk => {
                                 html += `<option value="${sidewalk.id}">${sidewalk.name}</option>`
                             });
                             sidewalk.innerHTML = html;
                             sidewalk.style.display = 'block';
-                            sidewalk.classList.add('form-control');
+                            sidewalk.required = true;
                         })
                     })
                 }else {
                     commune.style.display = 'none';
-                    commune.classList.remove('form-control');
+                    commune.required = false;
                     township.style.display = 'none';
-                    township.classList.remove('form-control');
+                    township.required = false;
                     quarter.style.display = 'none';
-                    quarter.classList.remove('form-control');
+                    quarter.required = false;
                     sidewalk.style.display = 'none';
-                    sidewalk.classList.remove('form-control');
+                    sidewalk.required = false;
                 }
             });
         </script>
