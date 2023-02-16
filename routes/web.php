@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\ExcelFormController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\FormularioController;
 use App\Http\Controllers\LocationController;
@@ -55,4 +56,7 @@ Route::middleware(['auth'])->group(function () {
         Route::get('quarters/{commune_id}', [LocationController::class, 'getQuarters'])->name('location.quarters');
         Route::get('sidewalks/{township_id}', [LocationController::class, 'getSidewalks'])->name('location.sidewalks');
     });
+
+    /* for export excel */
+    Route::get('/excel-forms', [ExcelFormController::class, 'exportForms'])->name('excel.forms');
 });

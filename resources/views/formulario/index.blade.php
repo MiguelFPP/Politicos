@@ -22,7 +22,10 @@
 
     @if (Auth::user()->hasRole(['administrador', 'simple']))
         <div class="row">
-            <div class="col-10">
+            <div class="col-8">
+            </div>
+            <div class="col-2 mb-2 text-right">
+                <button type="button" id="export-form" class="btn btn-warning">Exportar</button>
             </div>
             <div class="col-2 mb-2 text-right">
                 <a href="{{ route('formularios.crear') }}" class="btn btn-success">Crear formulario</a>
@@ -55,6 +58,7 @@
 
     <script>
         const route="{{Route('forms.all')}}"
+        const exportForm ="{{Route('excel.forms')}}"
         $(document).ready(function (){
             /* consume the route and print the table with datatable */
             $.ajax({
@@ -100,6 +104,16 @@
                         ]
                     })
                 }
+            })
+
+            /* export the table to excel */
+            function exportExcel(){
+                window.location=exportForm
+            }
+
+            $('#export-form').click(function (){
+                event.preventDefault()
+                exportExcel()
             })
         });
     </script>
